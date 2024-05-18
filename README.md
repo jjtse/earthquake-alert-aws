@@ -1,5 +1,8 @@
 # earthquake-alert-aws
-Building an Earthquake Alert Service with AWS DynamoDB and Lambda
+**Building an Earthquake Alert Service with AWS DynamoDB and Lambda**  
+
+ref. [brianoy/EEW_line_notify](https://github.com/brianoy/EEW_line_notify)  
+download. [地牛Wake up](https://eew.earthquake.tw/)  
 
 ## IAM 角色權限
 使用者、使用者群組 AmazonDynamoDBFullAccess，或自行設定DynamoDB的存取政策
@@ -30,7 +33,7 @@ Building an Earthquake Alert Service with AWS DynamoDB and Lambda
 ```
 
 ## 開發Python應用程式
-`pip install boto3`
+安裝AWS Python SDK: Boto3 >>> `pip install boto3`
 
 ```python
 # 創建 DynamoDB 客户端
