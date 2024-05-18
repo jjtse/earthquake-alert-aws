@@ -2,6 +2,7 @@ import logging
 import sys
 
 from aws.dynamodb import insertData
+from service.line_notify import lineWebhook
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
@@ -10,6 +11,7 @@ try:
     second = str(sys.argv[2])
     msg = "警告：台北地區預計震度" + magnitude + "級地震\n將於" + second + "秒後抵達"
     insertData(magnitude, second)
+    lineWebhook(msg)
 
 except ModuleNotFoundError:
     logging.error("=====錯誤:請確保request和sys module有被正確的安裝=====")
