@@ -7,6 +7,30 @@ download. [地牛Wake up](https://eew.earthquake.tw/)
 移除連動功能中，傳遞給指定程式的預估震度以及震波抵達秒數參數[(詳見)](https://www.facebook.com/share/p/1BYehqMVzE/)
 
 
+## Line Message API
+因Line Notify於2025/3/31終止服務，調整使用MessageAPI，將訊息發送給自己
+* Push message: One-to-one
+* Message Type: [Document](https://developers.line.biz/en/reference/messaging-api/#text-message)
+
+```shell
+curl -v -X POST https://api.line.me/v2/bot/message/multicast \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer {channel access token}' \
+-d '{
+    "to": ["U4af4980629...","U0c229f96c4..."],
+    "messages":[
+        {
+            "type":"text",
+            "text":"Hello, world1"
+        },
+        {
+            "type":"text",
+            "text":"Hello, world2"
+        }
+    ]
+}'
+```
+
 ## IAM 角色權限
 使用者、使用者群組 AmazonDynamoDBFullAccess，或自行設定DynamoDB的存取政策
 
