@@ -3,6 +3,9 @@
 
 ref. [brianoy/EEW_line_notify](https://github.com/brianoy/EEW_line_notify)  
 download. [地牛Wake up](https://eew.earthquake.tw/)  
+因 v4.1.1 (2025/02/16) 
+移除連動功能中，傳遞給指定程式的預估震度以及震波抵達秒數參數[(詳見)](https://www.facebook.com/share/p/1BYehqMVzE/)
+
 
 ## IAM 角色權限
 使用者、使用者群組 AmazonDynamoDBFullAccess，或自行設定DynamoDB的存取政策

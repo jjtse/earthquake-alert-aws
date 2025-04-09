@@ -7,8 +7,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(mess
 # 創建 DynamoDB 客户端
 dynamodb = boto3.client('dynamodb')
 
+
 # insert data
-def insertData(magnitude, second):
+def insertData():
     localDateTime = datetime.now().strftime('%Y%m%d%H%M%S')
 
     try:
@@ -17,8 +18,7 @@ def insertData(magnitude, second):
             Item={
                 'id': {'S': localDateTime},  # 項目: {'字串属性':'內容'}
                 'area': {'S': 'Taipei'},
-                'level': {'S': magnitude} ,
-                'countdown': {'S': second}
+                'level': {'S': '3'}
             }
         )
         logging.info("Data inserted successfully!")
